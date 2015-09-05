@@ -16,17 +16,10 @@
     <TabControl TabStripPlacement="Top" >
 
         <TabControl.Items>
-            <TabItem Header="ФАЙЛ">
-                <DockPanel LastChildFill="True"><!--Margin="2">
-                    <DockPanel.Resources>
-
-                        <Style TargetType="Button">
-                            <Setter Property="Padding" Value="2"/>
-                            <Setter Property="MinWidth" Value="100"/>
-                            <Setter Property="Margin" Value="3"/>
-                        </Style>
-
-                    </DockPanel.Resources>-->
+            
+            <TabItem Header="{x:Static res:Resources.ProjectPage}">
+                <DockPanel LastChildFill="True">
+                    
                     <ToolBarPanel DockPanel.Dock="Top">
                         <ToolBarTray>
                             <ToolBar>
@@ -139,7 +132,7 @@
             </TabItem>
 
 
-            <TabItem Header="РАЗДЕЛЫ">
+            <TabItem Header="{x:Static res:Resources.FoldersPage}">
 
 
 
@@ -376,7 +369,7 @@
             </TabItem>
 
 
-            <TabItem Header="ЗАПРОСЫ" IsSelected="True">
+            <TabItem Header="{x:Static res:Resources.RequestsPage}" IsSelected="True">
 
 
 

@@ -300,4 +300,13 @@
   <data name="CloneFolderButtonTooltip" xml:space="preserve">
     <value>Clone folder</value>
   </data>
+  <data name="FoldersPage" xml:space="preserve">
+    <value>FOLDERS</value>
+  </data>
+  <data name="ProjectPage" xml:space="preserve">
+    <value>PROJECT</value>
+  </data>
+  <data name="RequestsPage" xml:space="preserve">
+    <value>REQUESTS</value>
+  </data>
 </root>

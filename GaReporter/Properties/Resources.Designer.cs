@@ -223,6 +223,15 @@ namespace GaReporter.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на FOLDERS.
+        /// </summary>
+        public static string FoldersPage {
+            get {
+                return ResourceManager.GetString("FoldersPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Folders - {0}.
         /// </summary>
         public static string FoldersTitle {
@@ -385,6 +394,15 @@ namespace GaReporter.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на PROJECT.
+        /// </summary>
+        public static string ProjectPage {
+            get {
+                return ResourceManager.GetString("ProjectPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Execute request.
         /// </summary>
         public static string RefreshBigButtonText {
@@ -498,6 +516,15 @@ namespace GaReporter.Properties {
         public static string RemoveFolderButtonTooltip {
             get {
                 return ResourceManager.GetString("RemoveFolderButtonTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на REQUESTS.
+        /// </summary>
+        public static string RequestsPage {
+            get {
+                return ResourceManager.GetString("RequestsPage", resourceCulture);
             }
         }
         
