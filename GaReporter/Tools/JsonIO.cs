@@ -34,5 +34,14 @@ namespace Tools
 		{
 			System.IO.File.WriteAllText(fileName, JsonConvert.SerializeObject(obj, Formatting.Indented), Encoding.UTF8);
 		}
+
+		public static string DefaultIfEmptyDir(string fileName)
+		{
+			return (String.IsNullOrEmpty(System.IO.Path.GetDirectoryName(fileName))
+			        ? Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+			        + System.IO.Path.DirectorySeparatorChar
+			        : String.Empty)
+				+ fileName;
+		}
 	}
 }

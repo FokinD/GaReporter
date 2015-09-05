@@ -14,6 +14,7 @@ namespace GaReporter
 		public static void SaveAs(this DataTable dataTable, string fileName)
 		{
 			var ext = System.IO.Path.GetExtension(fileName);
+			fileName = Tools.JsonIO.DefaultIfEmptyDir(fileName);
 			
 			switch (ext) {
 				case ".xml":

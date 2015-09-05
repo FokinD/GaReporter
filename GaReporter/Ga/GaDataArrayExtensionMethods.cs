@@ -79,11 +79,11 @@ namespace Tools
 			
 			public int GetHashCode(string[] obj)
 			{
-				int hash = 1;
+				/*int hash = 1;
 				foreach (var element in obj) {
 					hash = hash * element.GetHashCode();
-				}
-				return hash;
+				}*/
+				return 0;
 			}
 			#endregion
 		}

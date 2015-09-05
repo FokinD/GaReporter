@@ -35,7 +35,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>21</ApplicationRevision>
-    <ApplicationVersion>1.5.5.%2a</ApplicationVersion>
+    <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -175,10 +175,8 @@
     <Compile Include="Commands\AddNewRequestCommand.cs" />
     <Compile Include="Commands\CloneFolderCommand.cs" />
     <Compile Include="Commands\CloneRequestCommand.cs" />
-    <Compile Include="Commands\FolderDetailsCommand.cs" />
     <Compile Include="Commands\OpenDocumentCommand.cs" />
     <Compile Include="Commands\OpenResultCommand.cs" />
-    <Compile Include="Commands\OptionsCommand.cs" />
     <Compile Include="Commands\RemoveFolderCommand.cs" />
     <Compile Include="Commands\RemoveRequestCommand.cs" />
     <Compile Include="Commands\ReOpenDocumentCommand.cs" />
@@ -205,12 +203,6 @@
     <Compile Include="Tools\DataTableExtensionMethods.cs" />
     <Compile Include="Tools\GetData.cs" />
     <Compile Include="Tools\JsonIO.cs" />
-    <Compile Include="Windows\FolderWindow.xaml.cs">
-      <DependentUpon>FolderWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\OptionsWindow.xaml.cs">
-      <DependentUpon>OptionsWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -223,14 +215,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\FolderWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\OptionsWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

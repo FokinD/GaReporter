@@ -58,7 +58,7 @@ namespace GaReporter
 			FoldersView.MoveCurrentToFirst();
 		}
 		
-		private string _Version = "1";
+		private string _Version = "1.0";
 
 		/// <summary>Версия документа</summary>
 		public string Version {
