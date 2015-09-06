@@ -19,8 +19,8 @@ namespace GaReporter
 			var folder = (FolderView)doc.FoldersView.CurrentItem;
 			var request = (RequestView)parameter;
 			
-			var keyPath = doc.KeyPath;
-			var accountEmailAddress = doc.AccountEmailAddress;
+			var keyPath = Tools.JsonIO.DefaultIfEmptyDir(doc.KeyPath);
+            var accountEmailAddress = doc.AccountEmailAddress;
 			var ids = doc.IDs;
 			
 			

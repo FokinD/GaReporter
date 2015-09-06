@@ -12,7 +12,7 @@ namespace GaReporter
             var request = (RequestView)parameter;
             try
             {
-                System.Diagnostics.Process.Start(request.FileName);
+                System.Diagnostics.Process.Start(Tools.JsonIO.DefaultIfEmptyDir(request.FileName));
             }
             catch (Exception ex) {
                 System.Windows.MessageBox
