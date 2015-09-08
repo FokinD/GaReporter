@@ -18,6 +18,7 @@ namespace GaReporter
 			var doc = (DocumentView)((DataSourceProvider)System.Windows.Application.Current.MainWindow.DataContext).Data;
 			var folder = (FolderView)doc.FoldersView.CurrentItem;
 			var request = (RequestView)parameter;
+			try {
 			
 			var keyPath = Tools.JsonIO.DefaultIfEmptyDir(doc.KeyPath);
             var accountEmailAddress = doc.AccountEmailAddress;
@@ -41,7 +42,6 @@ namespace GaReporter
 			bool desample = request.Desample;
 
 
-			try {
 				GetData(title, fileName, keyPath, accountEmailAddress, applicationName, ids, startDate, endDate, metrics, dimensions, filters, segment, sort, maxResults, desample);
 				MessageBox.Show(string.Format("{0} {1} {2}", Resources.RefreshSuccessMessage0, request.Title, Resources.RefreshSuccessMessage1), string.Format("{0} {1}", Application.Current.MainWindow.Title, request.Title), MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -66,7 +66,9 @@ namespace GaReporter
 			
 			while (!saved) {
 				try {
-					data.SaveAs(fileName);
+                    var ds = new DataSet();
+                    ds.Tables.Add(data);
+					ds.SaveAs(fileName);
 					saved = true;
 					
 				} catch (Exception ex) {
