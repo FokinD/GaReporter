@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace GaReporter
 {
-    public class FolderView : INotifyPropertyChanged, ICloneable, IDataErrorInfo
+    public class FolderView : INotifyPropertyChanged, ICloneable, IDataErrorInfo, IRequestView
     {
         public FolderView()
         {

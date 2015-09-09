@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace GaReporter
 {
-    public class RequestView : INotifyPropertyChanged, ICloneable, IDataErrorInfo
+    public class RequestView : INotifyPropertyChanged, ICloneable, IDataErrorInfo, IRequestView
     {
         public RequestView(Request data) : this()
         {
@@ -246,26 +246,26 @@ namespace GaReporter
             {
                 string msg = null;
 
-                /*switch (columnName) {
+                switch (columnName) {
 					case "Dimensions":
 						break;
 						
 					case "StartDate":
-						if (!date_pattern.IsMatch(_StartDate)) {
+						/*if (!date_pattern.IsMatch(_StartDate)) {
 							msg = "Некорректная дата";
-						}
+						}*/
 						break;
 
 					case "EndDate":
-						if (!date_pattern.IsMatch(_EndDate)) {
+						/*if (!date_pattern.IsMatch(_EndDate)) {
 							msg = "Некорректная дата";
-						}
+						}*/
 						break;
 						
 					case "FileName":
-						if (!file_pattern.IsMatch(_FileName)) {
+						/*if (!file_pattern.IsMatch(_FileName)) {
 							msg = "Некорректное имя файла";
-						}
+						}*/
 						break;
 						
 					case "Filters":
@@ -282,7 +282,7 @@ namespace GaReporter
 						
 					case "Sort":
 						break;
-				}*/
+				}
 
                 return msg;
             }

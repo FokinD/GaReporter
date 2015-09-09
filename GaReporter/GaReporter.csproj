@@ -36,7 +36,7 @@
     <PublisherName>FokinSoft</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.6.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -195,6 +195,7 @@
     <Compile Include="Ga\GaDataArrayExtensionMethods.cs" />
     <Compile Include="Model\DocumentView.cs" />
     <Compile Include="Model\FolderView.cs" />
+    <Compile Include="Model\IRequestView.cs" />
     <Compile Include="Model\RequestView.cs" />
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
       <AutoGen>True</AutoGen>
