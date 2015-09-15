@@ -134,8 +134,6 @@
 			
 			<TabItem Header="{x:Static res:Resources.FoldersPage}">
 				
-				
-				
 				<DockPanel LastChildFill="True" DataContext="{Binding}">
 					
 					<ToolBarPanel DockPanel.Dock="Top">
@@ -280,9 +278,10 @@
 										<RowDefinition/>
 										<RowDefinition/>
 										<RowDefinition/>
-										<RowDefinition/>
-									
-									</Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+
+                                    </Grid.RowDefinitions>
 									
 									
 									
@@ -357,15 +356,22 @@
 									<Grid Grid.Column="1" Grid.Row="9">
 										<TextBox Text="{Binding Path=MaxResults, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, TargetNullValue={x:Static s:String.Empty}}" ToolTip="{x:Static res:Resources.MaxResultsTooltip}"/>
 									</Grid>
-									
-									<Grid Grid.Column="0" Grid.Row="10">
-										<TextBlock Text="{x:Static res:Resources.DesampleLabel}"/>
-									</Grid>
-									<Grid Grid.Column="1" Grid.Row="10">
-										<CheckBox IsThreeState="False" IsChecked="{Binding Path=Desample}" ToolTip="{x:Static res:Resources.DesampleTooltip}"/>
-									</Grid>
-								
-								</Grid>
+
+                                    <Grid Grid.Column="0" Grid.Row="10">
+                                        <TextBlock Text="{x:Static res:Resources.DesampleLabel}"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="10">
+                                        <CheckBox IsThreeState="False" IsChecked="{Binding Path=Desample}" ToolTip="{x:Static res:Resources.DesampleTooltip}"/>
+                                    </Grid>
+
+                                    <Grid Grid.Column="0" Grid.Row="11">
+                                        <TextBlock Text="{x:Static res:Resources.FullUpdateLabel}"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="11">
+                                        <CheckBox IsThreeState="False" IsChecked="{Binding Path=FullUpdate}" ToolTip="{x:Static res:Resources.FullUpdateTooltip}"/>
+                                    </Grid>
+
+                                </Grid>
 							</StackPanel>
 						</DockPanel>
 					</Grid>

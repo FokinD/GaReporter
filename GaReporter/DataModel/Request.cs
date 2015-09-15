@@ -54,9 +54,16 @@ namespace GaReporter
 			set;
 		}
 
-		public bool desample {
-			get;
-			set;
-		}
-	}
+        public bool desample
+        {
+            get;
+            set;
+        }
+
+        public bool full
+        {
+            get;
+            set;
+        }
+    }
 }

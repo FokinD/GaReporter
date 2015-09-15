@@ -87,7 +87,39 @@ namespace GaReporter
                 var applicationName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
 
                 //загрузить весь DataSet
-                DataSet ds = System.IO.Path.GetExtension(fileName) == ".json" && System.IO.File.Exists(fileName) ? JsonIO.Open<DataSet>(fileName) : new DataSet();
+                var ext = System.IO.Path.GetExtension(fileName);//
+                DataSet ds;
+                if (System.IO.File.Exists(fileName))
+                {
+                    switch (ext)
+                    {
+                        case ".json":
+                            ds = JsonIO.Open<DataSet>(fileName);
+                            break;
+
+                        case ".xlsx":
+                            ds = new DataSet();
+                            ds.Tables.AddRange(
+                                requests
+                                .Select(e => GetData.FromExcel(JsonIO.DefaultIfEmptyDir(fileName), e.Title, null))
+                                .ToArray());
+
+                            break;
+
+                        case ".xml":
+                            throw new NotImplementedException("Актуализация XML еще не поддерживается");
+                            //TODO сделать поддержку XML
+                            //break;
+
+                        default:
+                            ds = new DataSet();
+                            break;
+                    }
+                }
+                else
+                {
+                    ds = new DataSet();
+                }
 
                 foreach (var request in requests)
                 {

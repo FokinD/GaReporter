@@ -32,6 +32,7 @@ namespace GaReporter
                 segment = Segment,
                 sort = Sort,
                 max = MaxResults,
+                full = FullUpdate,
                 desample = Desample
             };
         }
@@ -48,6 +49,7 @@ namespace GaReporter
             Sort = value.sort;
             MaxResults = value.max;
             Desample = value.desample;
+            FullUpdate = value.full;
         }
 
         private string _Title = string.Empty;
@@ -237,6 +239,22 @@ namespace GaReporter
             }
         }
 
+        private bool _FullUpdate = true;
+
+        public bool FullUpdate
+        {
+            get
+            {
+                return _FullUpdate;
+            }
+            set
+            {
+                if (_FullUpdate == value)
+                    return;
+                _FullUpdate = value;
+                OnPropertyChanged("FullUpdate");
+            }
+        }
 
 
         #region IDataErrorInfo implementation

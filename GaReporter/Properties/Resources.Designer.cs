@@ -241,6 +241,24 @@ namespace GaReporter.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на full update:.
+        /// </summary>
+        public static string FullUpdateLabel {
+            get {
+                return ResourceManager.GetString("FullUpdateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Uncheck, if you want actualize last values only..
+        /// </summary>
+        public static string FullUpdateTooltip {
+            get {
+                return ResourceManager.GetString("FullUpdateTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на max-results:.
         /// </summary>
         public static string MaxResultsLabel {

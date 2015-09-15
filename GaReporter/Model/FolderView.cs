@@ -33,6 +33,7 @@ namespace GaReporter
                 sort = Sort,
                 max = MaxResults ?? 0,
                 desample = Desample,
+                full = FullUpdate,
                 requests = Requests.Select(e => e.GetData()).ToArray()
             };
         }
@@ -50,6 +51,7 @@ namespace GaReporter
             Sort = value.sort;
             MaxResults = value.max == 0 ? null : (int?)value.max;
             Desample = value.desample;
+            FullUpdate = value.full;
 
             var requests = Requests;
             requests.Clear();
@@ -246,6 +248,23 @@ namespace GaReporter
                     return;
                 _Desample = value;
                 OnPropertyChanged("Desample");
+            }
+        }
+
+        private bool _FullUpdate = true;
+
+        public bool FullUpdate
+        {
+            get
+            {
+                return _FullUpdate;
+            }
+            set
+            {
+                if (_FullUpdate == value)
+                    return;
+                _FullUpdate = value;
+                OnPropertyChanged("FullUpdate");
             }
         }
 

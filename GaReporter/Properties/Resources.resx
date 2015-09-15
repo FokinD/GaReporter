@@ -309,4 +309,10 @@
   <data name="RequestsPage" xml:space="preserve">
     <value>REQUESTS</value>
   </data>
+  <data name="FullUpdateLabel" xml:space="preserve">
+    <value>full update:</value>
+  </data>
+  <data name="FullUpdateTooltip" xml:space="preserve">
+    <value>Uncheck, if you want actualize last values only.</value>
+  </data>
 </root>

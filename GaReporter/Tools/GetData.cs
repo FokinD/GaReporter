@@ -15,6 +15,7 @@ namespace Tools
 		public static DataTable FromExcel(string workbook, string worksheet, IEnumerable<string> columns)
 		{
 			var dt = new DataTable();
+			dt.TableName = worksheet;
 			
 			using (var connection = new OdbcConnection("DSN=Excel Files;DBQ=" + workbook))
 			{
